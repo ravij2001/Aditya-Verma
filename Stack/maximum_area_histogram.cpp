@@ -4,12 +4,10 @@
 using namespace std;
 int main()
 {
+    int arr[7] = {6, 2, 5, 4, 5, 1, 6};
     int n = 7;
-    int arr[n] = {6, 2, 5, 4, 5, 1, 6};
-    int width[n];
-    int area[n];
     stack<pair<int, int>> s1, s2;
-    vector<int> left, right;
+    vector<int> left, width, area, right;
     int pseudo_index_left = -1;
     int pseudo_index_right = n;
 
@@ -79,6 +77,6 @@ int main()
         area[i] = (width[i] * arr[i]); // taking max after finding area
     }
 
-  cout << *max_element(area, area + n);
+    // cout << "Max Element = " << *max_element(area.begin(), area.end());
     return 0;
 }
