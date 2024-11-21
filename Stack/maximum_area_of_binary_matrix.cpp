@@ -1,11 +1,8 @@
-// stock span problem is a variation of nearest greater to left problem
-
 #include <bits/stdc++.h>
 using namespace std;
-int main()
-{
-    int arr[7] = {6, 2, 5, 4, 5, 1, 6};
-    int n = 7;
+
+int maximum_area_histogram(vector<int>& arr){
+     int n= arr.size();
     stack<pair<int, int>> s1, s2;
     vector<int> left, width, area, right;
     int pseudo_index_left = -1;
@@ -76,6 +73,35 @@ int main()
     {
         area[i] = (width[i] * arr[i]); // taking max after finding area
     }
-    cout << "Max Element = " << *max_element(area.begin(), area.end());
-    return 0;
+    int m = *max_element(area.begin(), area.end());
+    return m;
 }
+
+  int maximalRectangle(vector<vector<char>>& matrix) {
+    int n = matrix.size(), m = matrix[0].size();
+    int result = 0;
+        vector<int> histogram(m, 0);   
+        for(int i=0; i < n; i++){
+            for(int j=0 ; j < m; j++){
+                if(matrix[i][j] == '1')
+                    histogram[j] += 1;
+                else
+                    histogram[j] = 0;
+            }
+            result = max(result, maximum_area_histogram(histogram));
+            cout<<result<<" ";
+        }
+        return result;
+  }
+
+
+int main() {
+    vector<vector<char>> mat = 
+        {{'0','1','1','0'},
+         {'1','1','1','1'},
+         {'1','1','1','1'},
+         {'1','1','0','0'}};
+         
+    cout << maximalRectangle(mat) << endl;
+    return 0;
+}  
