@@ -1,0 +1,14 @@
+Arrays:
+
+Easy and medium level
+
+1)Find minimum and maximum element in array
+2) Two sum
+3) Plus One
+4) Single Number
+5) Missing Number
+6) Max Consecutive ones
+7) Single element in an sorted array
+8) Second largest element in an array
+9) check if array is sorted or not
+10)
