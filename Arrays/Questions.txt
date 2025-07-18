@@ -9,6 +9,10 @@ Easy and medium level
 5) Missing Number
 6) Max Consecutive ones
 7) Single element in an sorted array
-8) Second largest element in an array
+8) Second largest element in an array (important)
 9) check if array is sorted or not
-10)
+10) linear search
+11) remove duplicates from sorted array (important)
+12) Divisors of Number
+13) Check prime Number
+14) count digits 
