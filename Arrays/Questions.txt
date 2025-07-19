@@ -16,3 +16,4 @@ Easy and medium level
 12) Divisors of Number
 13) Check prime Number
 14) count digits 
+15) rotate the array 
