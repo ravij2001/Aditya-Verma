@@ -3,6 +3,8 @@
 #include <algorithm>
 using namespace std;
 
+
+// time complexity for binary search is o(logn) which is good compared to linear search
 class Solution{
 public:
     int linearSearch(vector<int> &nums, int target)
@@ -18,5 +20,6 @@ public:
             else
                 high = mid - 1;
         }
+           return -1;
     }
 };
