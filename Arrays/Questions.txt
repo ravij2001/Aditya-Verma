@@ -15,5 +15,13 @@ Easy and medium level
 11) remove duplicates from sorted array (important)
 12) Divisors of Number
 13) Check prime Number
-14) count digits 
+14) count digits of numbers
 15) rotate the array 
+16) check whether array contains duplicates or not
+17) kadane's algorithm for maximum sub array problem
+
+
+String questions:
+
+1) Anagram strings
+2) palindrome strings
