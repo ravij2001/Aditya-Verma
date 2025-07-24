@@ -1,0 +1,6 @@
+Stack questions:
+
+1) Nearest Greater to left
+2) Nearest Greater to right (next largest element)
+3) Nearest smaller to left (next smaller element)
+4) Nearest smaller to right

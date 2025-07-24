@@ -1,84 +1,33 @@
-// stock span problem is a variation of nearest greater to left problem
-
 #include <bits/stdc++.h>
 using namespace std;
-int main()
-{
-    int n = 7;
-    int arr[n] = {6, 2, 5, 4, 5, 1, 6};
-    int width[n];
-    int area[n];
-    stack<pair<int, int>> s1, s2;
-    vector<int> left, right;
-    int pseudo_index_left = -1;
-    int pseudo_index_right = n;
+int main(){
+    int arr[5] = {4, 5, 2, 10 ,8};
+    int n = 5;
+    vector<int> v; 
+    stack<int> s;
 
-    for (int i = 0; i < n; i++)
-    { 
-        if (s1.size() == 0)
-        {
-            left.push_back(pseudo_index_left);
+    for(int i = n - 1 ; i >= 0 ; i--){                    // only change is to traverse from left to right
+        if(s.size() == 0){
+             v.push_back(-1); 
         }
-        else if (s1.size() > 0 && s1.top().first < arr[i])
-        {
-            left.push_back(s1.top().second);
+        else if(s.size() > 0 && s.top() < arr[i]){
+            v.push_back(s.top());
         }
-        else if (s1.size() > 0 && s1.top().first >= arr[i])
-        {
-            while (s1.size() > 0 && s1.top().first >= arr[i])
-            {
-                s1.pop();
+        else if(s.size() > 0 && s.top() >= arr[i]){
+            while(s.size() > 0 && s.top() >= arr[i]){
+                s.pop();
             }
-            if (s1.size() == 0)
-            {
-                left.push_back(pseudo_index_left);
+            if(s.size() == 0){
+                v.push_back(-1);
             }
-            else
-            {
-                left.push_back(s1.top().second);
+            else{
+                v.push_back(s.top());
             }
         }
-        s1.push({arr[i], i});
+            s.push(arr[i]);
     }
-
-    for (int i = n - 1; i >= 0; i--)
-    {
-        if (s2.size() == 0)
-        {
-            right.push_back(pseudo_index_right);
-        }
-        else if (s2.size() > 0 && s2.top().first < arr[i])
-        {
-            right.push_back(s2.top().second);
-        }
-        else if (s2.size() > 0 && s2.top().first >= arr[i])
-        {
-            while (s2.size() > 0 && s2.top().first >= arr[i])
-            {
-                s2.pop();
-            }
-            if (s2.size() == 0)
-            {
-                right.push_back(pseudo_index_right);
-            }
-            else
-            {
-                right.push_back(s2.top().second);
-            }
-        }
-        s2.push({arr[i], i});
-    }
-    reverse(right.begin(), right.end());
-    
-    for (int i = 0; i < n; i++)
-    {
-        width[i] = (right[i] - left[i] - 1); // taking max after finding area
-    }
-    for (int i = 0; i < n; i++)
-    {
-        area[i] = (width[i] * arr[i]); // taking max after finding area
-    }
-
-  cout << *max_element(area, area + n);
+    reverse(v.begin(),v.end());
+    for (auto i : v)
+        cout << i << " ";
     return 0;
 }
