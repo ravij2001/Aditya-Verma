@@ -4,3 +4,4 @@ Stack questions:
 2) Nearest Greater to right (next largest element)
 3) Nearest smaller to left (next smaller element)
 4) Nearest smaller to right
+5) Parenthesis checker
