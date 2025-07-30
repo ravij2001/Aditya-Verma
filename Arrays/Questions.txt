@@ -22,6 +22,13 @@ Easy and medium level
 16) check whether array contains duplicates or not problem
 17) kadane's algorithm for maximum sub array problem
 18) reverse an array
+19)  Move all zeros to the end — keep order
+20) intersection of sorted array
+21) union of sorted array
+22)  find duplicates in array
+23)
+24)
+25)
 
 String questions:
 
