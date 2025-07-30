@@ -7,18 +7,21 @@ using namespace std;
 
 // time complexity : o(n) and space complexity is 0(n)
 
-//  using set method we can also solve this using two pointer technique
-
-class Solution {
-public:
-    int removeDuplicates(vector<int>& nums) {
-        set<int> uniqueNums(nums.begin(), nums.end()); // removes duplicates
-          // Copy unique values back into nums
-        int i = 0;
-        for (int val : uniqueNums) {
-            nums[i++] = val;
+    set<int> removeDuplicates(vector<int>& nums) {
+        set<int> uniqueNums; // removes duplicates
+          for(int num : nums){
+            if(uniqueNums.count(num))
+                continue;
+            uniqueNums.insert(num);    
+          }
+          return uniqueNums;
         }
 
-        return uniqueNums.size(); 
+int main(){
+    vector<int> nums = {1,2,3,3,4,4,4,1};
+    set<int> ans = removeDuplicates(nums);
+    for(int a : ans){
+        cout<<a<<" ";
     }
-};
+    return 0;
+}
