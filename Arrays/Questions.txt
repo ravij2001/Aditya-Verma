@@ -1,25 +1,27 @@
+Questions solved by me:
+
 Arrays:
 
 Easy and medium level
 
-1)Find minimum and maximum element in array
-2) Two sum
-3) Plus One
-4) Single Number
-5) Missing Number
-6) Max Consecutive ones
-7) Single element in an sorted array
-8) Second largest element in an array (important)
+1)Find minimum and maximum element in an array
+2) Two sum problem
+3) Plus One problem
+4) Single Number problem
+5) Missing Number problem
+6) Max Consecutive ones problem
+7) Single element in an sorted array problem 
+8) find Second largest element in an array (important) 
 9) check if array is sorted or not
-10) linear search
+10) linear search problem
 11) remove duplicates from sorted array (important)
 12) Divisors of Number
 13) Check prime Number
 14) count digits of numbers
-15) rotate the array 
-16) check whether array contains duplicates or not
+15) rotate the array problem
+16) check whether array contains duplicates or not problem
 17) kadane's algorithm for maximum sub array problem
-
+18) reverse an array
 
 String questions:
 
